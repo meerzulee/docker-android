@@ -103,7 +103,7 @@ class Device(ABC):
             try:
                 form_url = f"https://docs.google.com/forms/d/e/{Device.FORM_ID}/formResponse"
                 self._prepare_analytics_payload()
-                requests.post(url=form_url, data=self.form_data)
+                # requests.post(url=form_url, data=self.form_data)
             except requests.exceptions.RequestException as rer:
                 self.logger.warning(rer)
                 pass
